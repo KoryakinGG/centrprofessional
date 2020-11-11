@@ -19,13 +19,13 @@ public class Main {
     public static void main(String[] args) {
         Cat cat1 = new Cat();
         cat1.weight = 11;
-        cat1.strength = 10;
-        cat1.age = 10;
+        cat1.strength = 11;
+        cat1.age = 11;
 
         Cat cat2 = new Cat();
-        cat2.weight = 10;
-        cat2.strength = 10;
-        cat2.age = 10;
+        cat2.weight = 12;
+        cat2.strength = 12;
+        cat2.age = 12;
 
         System.out.println(cat1.fight(cat2));
         System.out.println(cat2.fight(cat1));
@@ -42,8 +42,11 @@ class Cat {
     }
 
     public boolean fight(Cat anotherCat) {
-        int cat1 = this.age + this.strength + this.weight;
-        int cat2 = anotherCat.age + anotherCat.strength + anotherCat.weight;
-        return cat1 > cat2;
+        int ageAdvantage = this.age > anotherCat.age ? 1 : 0;
+        int weightAdvantage = this.weight > anotherCat.weight ? 1 : 0;
+        int strengthAdvantage = this.strength > anotherCat.strength ? 1 : 0;
+
+        int score = ageAdvantage + weightAdvantage + strengthAdvantage;
+        return score >= 1;
     }
 }
