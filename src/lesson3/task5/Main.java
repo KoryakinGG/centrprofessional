@@ -1,11 +1,11 @@
-package lesson3;
+package lesson3.task5;
 
 import java.util.Arrays;
 
 /*
 Задание: Дан массив с числами. Выведите последовательно его элементы используя рекурсию и не используя цикл.
 */
-public class Main3_5 {
+public class Main {
     public static void main(String[] args) {
         int num[] = {4,2,6,2,65};
         print(num,0);

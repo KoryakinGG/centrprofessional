@@ -1,4 +1,4 @@
-package lesson2;
+package lesson2.task6;
 
 import java.util.Scanner;
 
@@ -6,7 +6,7 @@ import java.util.Scanner;
 Задание: Даны переменные a и b. Проверьте, что a делится без остатка на b. Если это так - выведите 'Делится' и результат деления,
 иначе выведите 'Делится с остатком' и остаток от деления.
 */
-public class Main2_6 {
+public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Введите число а: ");

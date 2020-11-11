@@ -1,11 +1,11 @@
-package lesson2;
+package lesson2.task4;
 
 import java.util.Scanner;
 
 /*
 Задание: Пользователь вводит сумму вклада и процент, который будет начисляться ежегодно. Отобразить размер вклада поочередно на ближайшие 5 лет.
 */
-public class Main2_4 {
+public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Введите сумму вклада: ");

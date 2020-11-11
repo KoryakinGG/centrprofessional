@@ -1,4 +1,4 @@
-package lesson2;
+package lesson2.task12;
 
 import java.util.Scanner;
 
@@ -10,7 +10,7 @@ import java.util.Scanner;
 Пример для списка 2, 4, 4, 4, 8, 8, 4, 12, 12, 14:
 3
 */
-public class Main2_12 {
+public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int [] array = new int[10];

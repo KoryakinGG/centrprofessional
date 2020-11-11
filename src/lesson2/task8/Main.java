@@ -1,8 +1,8 @@
-package lesson2;
+package lesson2.task8;
 /*
 Задание: Дан массив с элементами [2, 3, 4, 5]. С помощью цикла for найдите произведение элементов этого массива.
 */
-public class Main2_8 {
+public class Main {
     public static void main(String[] args) {
         int [] array = {2,3,4,5};
 

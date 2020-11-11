@@ -1,11 +1,11 @@
-package lesson2;
+package lesson2.task11;
 
 import java.util.Random;
 
 /*
 Задание: Дан массив с числами. Узнайте сколько элементов с начала массива надо сложить, чтобы в сумме получилось больше 10-ти.
 */
-public class Main2_11 {
+public class Main {
     public static void main(String[] args) {
         Random random = new Random();
         int [] array = new int [20];

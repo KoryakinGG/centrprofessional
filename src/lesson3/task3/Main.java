@@ -1,8 +1,8 @@
-package lesson3;
+package lesson3.task3;
 /*
 Задание: Сделайте функцию, которая параметрами принимает 2 числа. Если эти числа равны - пусть функция вернет true, а если не равны - false.
 */
-public class Main3_3 {
+public class Main {
 
     public static boolean equality (int a, int b) {
         return a==b;

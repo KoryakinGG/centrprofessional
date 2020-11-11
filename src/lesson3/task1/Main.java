@@ -1,4 +1,4 @@
-package lesson3;
+package lesson3.task1;
 /* Написать функцию, которая вычисляет минимум из трёх чисел.
 Требования:
 •	Программа должна выводить текст на экран.
@@ -7,7 +7,7 @@ package lesson3;
 •	Метод main должен выводить на экран результат работы метода min. Каждый раз с новой строки.
 •	Метод min должен возвращать минимальное значение из чисел a, b и с.
 */
-public class Main3_1 {
+public class Main {
        public static void main(String[] args) {
             System.out.println(min(1, 2, 3));
             System.out.println(min(-1, -2, -3));

@@ -1,4 +1,4 @@
-package lesson3;
+package lesson3.task2;
 /*
 Написать функцию, которая вычисляет минимум из четырёх чисел.
 Функция min(a,b,c,d) должна использовать (вызывать) функцию min(a,b)
@@ -14,7 +14,7 @@ package lesson3;
 •	Метод min(a, b, c, d) должен возвращать минимальное значение из чисел a, b, c, d.
 */
 
-public class Main3_2 {
+public class Main {
     public static int min(int a, int b, int c, int d) {
         int x = min(a,b);
         int y = min(c,d);

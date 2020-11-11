@@ -1,11 +1,11 @@
-package lesson2;
+package lesson2.task10;
 
 import java.util.Random;
 
 /*
 Задание: Дан массив с числами. Проверьте, есть ли в нем два одинаковых числа подряд. Если есть - выведите 'да', а если нет - выведите 'нет'.
 */
-public class Main2_10 {
+public class Main {
     public static void main(String[] args) {
         Random random = new Random();
 

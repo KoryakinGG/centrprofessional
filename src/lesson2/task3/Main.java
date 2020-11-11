@@ -1,4 +1,4 @@
-package lesson2;
+package lesson2.task3;
 /*
 Используя цикл for вывести на экран прямоугольный треугольник из восьмёрок со сторонами 10 и 10.
 Пример вывода на экран:
@@ -13,7 +13,7 @@ package lesson2;
 888888888
 8888888888
 */
-public class Main2_3 {
+public class Main {
     public static void main(String[] args) {
 
         for (int i = 0; i < 10; i++) {
