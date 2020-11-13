@@ -22,8 +22,9 @@ public class Main {
     }
 
     public static int min(int a, int b) {
-        return Math.min(a, b);
-
+//        return Math.min(a, b);
+        if (a>b){return b;}
+        else {return a;}
     }
 
     public static void main(String[] args) throws Exception {
