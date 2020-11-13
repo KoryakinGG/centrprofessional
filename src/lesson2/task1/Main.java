@@ -16,10 +16,9 @@ public class Main {
 
         String [] array = {"Мама","Мыла","Раму"};
 
-        for( int i=0;i<3;i++)
-            for(int j=0;j<3;j++)
-                if (i!=j)
+        for( int i=0;i<3;i++) // 2
+            for(int j=0;j<3;j++) // 1
+                if (i!=j) //
                     System.out.println(array[i]+array[j]+array[3-i-j]);
-
     }
 }
