@@ -37,7 +37,7 @@ class Horse extends Animal {
 }
 
 class Pegasus extends Horse {
-    int wing;
+    private int wing;
     public Pegasus(String name, int age, int leg, int wing) {
         super(name, age, leg);
         this.wing = wing;

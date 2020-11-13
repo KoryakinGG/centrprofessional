@@ -26,9 +26,9 @@ public class Main {
     }
 }
 class Mouse {
-    String name;
-    int height;
-    int tail;
+    private String name;
+    private int height;
+    private int tail;
 
     public Mouse(String name, int height, int tail) {
         this.name = name;
@@ -37,9 +37,9 @@ class Mouse {
     }
 }
 class Dog {
-    String name;
-    int height;
-    int tail;
+    private String name;
+    private int height;
+    private int tail;
 
     public Dog(String name, int height, int tail) {
         this.name = name;
@@ -48,9 +48,9 @@ class Dog {
     }
 }
 class Cat {
-    String name;
-    int height;
-    int tail;
+    private String name;
+    private int height;
+    private int tail;
 
     public Cat(String name, int height, int tail) {
         this.name = name;
