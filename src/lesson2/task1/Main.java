@@ -14,37 +14,12 @@ package lesson2.task1;
 public class Main {
     public static void main(String[] args) {
 
-        String [] array1 = {"Мама","Мыла","Раму"};
-        String [] array2 = {"Мыла","Мама","Раму"};
-        String [] array3 = {"Раму","Мыла","Мама"};
-        String [] array4 = {"Раму","Мама","Мыла"};
-        String [] array5 = {"Мама","Раму","Мыла"};
-        String [] array6 = {"Мыла","Раму","Мама"};
+        String [] array = {"Мама","Мыла","Раму"};
 
-
-        for (int i = 0; i < array1.length; i++) {
-            System.out.print(array1[i]);
-        }
-        System.out.println();
-        for (int i = 0; i < array2.length; i++) {
-            System.out.print(array2[i]);
-        }
-        System.out.println();
-        for (int i = 0; i < array3.length; i++) {
-            System.out.print(array3[i]);
-        }
-        System.out.println();
-        for (int i = 0; i < array4.length; i++) {
-            System.out.print(array4[i]);
-        }
-        System.out.println();
-        for (int i = 0; i < array5.length; i++) {
-            System.out.print(array5[i]);
-        }
-        System.out.println();
-        for (int i = 0; i < array6.length; i++) {
-            System.out.print(array6[i]);
-        }
+        for( int i=0;i<3;i++)
+            for(int j=0;j<3;j++)
+                if (i!=j)
+                    System.out.println(array[i]+array[j]+array[3-i-j]);
 
     }
 }
