@@ -1,4 +1,5 @@
 package lesson3.task1;
+
 /* Написать функцию, которая вычисляет минимум из трёх чисел.
 Требования:
 •	Программа должна выводить текст на экран.
@@ -8,28 +9,41 @@ package lesson3.task1;
 •	Метод min должен возвращать минимальное значение из чисел a, b и с.
 */
 public class Main {
-       public static void main(String[] args) {
-            System.out.println(min(1, 2, 3));
-            System.out.println(min(-1, -2, -3));
-            System.out.println(min(3, 5, 3));
-            System.out.println(min(5, 5, 10));
-            System.out.println(min(1, 5, 10));
-            System.out.println(min(5, 1, -10));
-            System.out.println(min(10, 5, 1));
-            System.out.println(min(5, 10, -1));
-        }
+    public static void main(String[] args) {
+        System.out.println(min(1, 2, 3));
+        System.out.println(min(-1, -2, -3));
+        System.out.println(min(3, 5, 3));
+        System.out.println(min(5, 5, 10));
+        System.out.println(min(1, 5, 10));
+        System.out.println(min(5, 1, -10));
+        System.out.println(min(10, 5, 1));
+        System.out.println(min(5, 10, -1));
+    }
 
 //    public static int min(int a, int b, int c) {
 //        return a>b?(c>b?b:c):a;
 //    }
 //    В общем, у меня не вышло с последним примером. не выводит у меня он -1, подскажите как правильно написать?
-//    Еще подумал, что наверно, не правильно применять метод Min, но честно, лень писать =) я на JavaRush сейчас на 20 уровне,
-//    и прорешал около 500 задач там, поэтому повторять иногда лень.
+
+
+//    public static int min(int a, int b, int c) {
+//        int x  = Math.min(a, b);
+//        int y = Math.min(b, c);
+//        return Math.min(x, y);
+//    }
 
     public static int min(int a, int b, int c) {
-        int x  = Math.min(a, b);
-        int y = Math.min(b, c);
-        return Math.min(x, y);
+        int x = 0;
+        int y = 0;
+        if (a > b) {
+            x = b;
+        } else {x = a;}
+        if (b > c) {
+            y = c;
+        }else {y = b;}
+        if (x > y) {
+            return y;
+        } else {return x;}
     }
 }
 
