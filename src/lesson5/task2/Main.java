@@ -61,6 +61,8 @@ public class Main {
             System.out.println("Такого города нет в списке");
         }
 
+        // Тут, я думаю, лучше использовать Map, но так как мы вместе еще его не проходили, то пришлось создавать 2 аррейлист. другие варианты придумывать лень.
+
         // Read the house number
 //        int houseNumber = scanner.nextInt();
 //
