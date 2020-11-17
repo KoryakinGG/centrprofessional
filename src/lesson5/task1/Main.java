@@ -12,14 +12,14 @@ public class Main {
         // Scanner scanner = new Scanner(System.in);
         ArrayList<String> names = new ArrayList<>();
         names.add("Анатолий");
-        names.add("Георгий");// удалить
-        names.add("Руслан"); // удалить
         names.add("Георгий");
-        names.add("Павел");
         names.add("Руслан");
+        names.add("Георгий");// удалить
+        names.add("Павел");
+        names.add("Руслан"); // удалить
 
-        ArrayList<String> newNames = removeTheSameValues(names);
-        System.out.println(newNames);
+//        ArrayList<String> newNames = removeTheSameValues(names);
+//        System.out.println(newNames);
 
         for (int i = 0; i < names.size(); i++) {
             for (int j = i+1; j < names.size(); j++) {
