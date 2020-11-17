@@ -18,8 +18,8 @@ public class Main {
         names.add("Павел");
         names.add("Руслан"); // удалить
 
-//        ArrayList<String> newNames = removeTheSameValues(names);
-//        System.out.println(newNames);
+        ArrayList<String> newNames = removeTheSameValues(names);
+        System.out.println(newNames);
 
         for (int i = 0; i < names.size(); i++) {
             for (int j = i+1; j < names.size(); j++) {
