@@ -1,4 +1,4 @@
-package lesson5.task5;
+package lesson6.task1;
 
 import java.io.FileReader;
 import java.io.IOException;
