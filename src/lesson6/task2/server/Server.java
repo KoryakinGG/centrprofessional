@@ -14,44 +14,46 @@ import java.util.Map;
 public class Server {
     public static void main(String[] args) {
         ArrayList<Socket> clients = new ArrayList<>();
-        Socket socket = null;
+        ArrayList<String> names = new ArrayList<>(); // список я нигде не использую. Надо сделать проверку, на совпадение имен
+//        names.add("ChatBot");
+        Socket socket;  //сокет для клиента
         try {
             ServerSocket serverSocket = new ServerSocket(8189);
             System.out.println("INFO: Сервер запущен");
-            while (true){
-                socket = serverSocket.accept(); // Ожидаем клиента
+            while (true) {
+                socket = serverSocket.accept(); // Ожидаем клиента и когда кто-то подключается кладем его в этот сокет
                 DataInputStream in = new DataInputStream(socket.getInputStream()); // Поток ввода
-//              DataOutputStream out = new DataOutputStream(socket.getOutputStream());
-                System.out.println("Клиент подключился");
+                DataOutputStream out;
+                String name = in.readUTF();
                 clients.add(socket); // Добавляем клиента в список
+                names.add(name);
+                System.out.println(name + " подключился");
+                for (Socket count : clients) {
+                    out = new DataOutputStream(count.getOutputStream());
+                    out.writeUTF(name + " подключился");
+                }
                 Thread thread = new Thread(new Runnable() { // Открываем поток для клиента
                     @Override
                     public void run() {
                         try {
-//                          Короче, я не стал сильно заморачиваться с листами, просто сюда запомнил имя. Все равно,
-//                          потом код переписывать будете
-                            String name = in.readUTF();
-                            for (int i = 0; i < clients.size(); i++) {
-                                System.out.println(name + " присоединился к нам");
-                            }
-                            while (true){
-                                System.out.println("Ожидаем сообщение...");
-                                String request = in.readUTF();
-                                DataOutputStream out;
-                                System.out.println(name + " : " + request);
-                                for (Socket socket: clients) { // Перебираем список клиентов
+                            DataOutputStream out;
+                            while (true) {
+//                                System.out.println("Ожидаем сообщение...");
+                                String request = in.readUTF(); // читаем сообщение и помещаем его в стринг
+                                System.out.println(name + ": " + request); // выводим в консоль сервера
+                                for (Socket socket : clients) { // Перебираем список клиентов
                                     out = new DataOutputStream(socket.getOutputStream()); // Поток вывода
-                                    out.writeUTF(name + " : " + request);
+                                    out.writeUTF(name + ": " + request);
                                 }
                             }
-                        }catch (IOException exception) {
+                        } catch (IOException exception) {
                             exception.printStackTrace();
                         }
                     }
                 });
                 thread.start();
             }
-        }catch (IOException exception){
+        } catch (IOException exception) {
             exception.printStackTrace();
         }
     }

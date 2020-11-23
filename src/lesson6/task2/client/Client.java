@@ -7,6 +7,8 @@ import java.net.Socket;
 import java.util.Scanner;
 
 public class Client {
+    private static String name;
+
     public static void main(String[] args) {
         try {
             Socket socket = new Socket("localhost",8189);
@@ -17,6 +19,7 @@ public class Client {
                 public void run() {
                     try {
                         System.out.println("Введите свое имя:");
+                        name = in.readUTF();
                         while (true){
                             String response = in.readUTF();
                             System.out.println(response);
@@ -28,9 +31,11 @@ public class Client {
             });
             thread.start();
             Scanner scanner = new Scanner(System.in);
+            String msg = "";
             while(true){
-                String msg = scanner.nextLine();
+                msg = scanner.nextLine();
                 if (msg.equals("exit")) {
+                    out.writeUTF("*****вышел из чата*****");
                     socket.close();
                 }
                 out.writeUTF(msg);
