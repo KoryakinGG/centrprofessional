@@ -23,7 +23,6 @@ package lesson5.task4;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
@@ -36,16 +35,17 @@ public class Main {
         File file = new File(scanner.nextLine());
         //  тема ниже, а именно: Scanner(file), взята от сюда https://hr-vector.com/java/class-scanner и с JavaRush
         // (я там 20 лвл, но не все запомнил, что там проходил, проходил где-то полгода назад)
-        Scanner scanner1 = null;
+//        Scanner scanner1 = null;
         ArrayList<Integer> arrayNumbers = new ArrayList<>();
         try {
-            scanner1 = new Scanner(file);
-            while (scanner1.hasNext()) {
-                arrayNumbers.add(scanner1.nextInt());
+            scanner = new Scanner(file);
+            while (scanner.hasNext()) {
+                arrayNumbers.add(scanner.nextInt());
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
+//        scanner1.close();
         scanner.close();
         System.out.print("Выводим числа в массиве: " + arrayNumbers);
         System.out.println();
