@@ -28,31 +28,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args)  {
-        //ради практики сделал файл и записал в него рандомные числа в пределах 100
-        File newFile = new File("C://temp/array.txt");
-        try {
-            newFile.createNewFile();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        System.out.println("Файл создан");
-        Random random = new Random();
-
-        try {
-            FileWriter fileWriter = new FileWriter("C://temp/array.txt");
-            for (int i = 0; i < 30; i++) {
-                int temp = random.nextInt(100);
-                String string = Integer.toString(temp);
-                fileWriter.write(string);
-                fileWriter.append("\n");
-            }
-            fileWriter.flush();
-        } catch (IOException exception) {
-            exception.printStackTrace();
-        }
-        System.out.println("Файл заполнен случайными числами");
-
-//        C://temp/array.txt
+        //        C://temp/array.txt
         System.out.println("Введите путь к файлу: ");
         // Считываем с консоли путь к файлу
         Scanner scanner = new Scanner(System.in);
@@ -70,7 +46,6 @@ public class Main {
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-        scanner1.close();
         scanner.close();
         System.out.print("Выводим числа в массиве: " + arrayNumbers);
         System.out.println();
